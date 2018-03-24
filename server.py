@@ -143,7 +143,7 @@ class RemoteConverter(object):
 
         d.addCallback(self.replicate)
 
-        if self.settings.Plex['refresh']:
+        if self.settings.Plex['host']:
             d.addCallbacks(self.refresh_plex)
 
         d.addCallbacks(self.logsuccess, self.logerrors)
